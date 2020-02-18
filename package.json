@@ -17,9 +17,7 @@
     "start": "react-scripts-ts start",
     "test": "react-scripts-ts test --env=jsdom --coverage",
     "eject": "react-scripts-ts eject",
-    "build-lib": "rm -rf ./lib/* && node ./build-lib.js",
-    "prepack": "npm run-script build-lib",
-    "postversion": "npm run-script build-lib"
+    "build-lib": "rm -rf ./lib/* && node ./build-lib.js"
   },
   "author": "",
   "license": "",
