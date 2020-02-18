@@ -17,6 +17,7 @@ export interface RLDDProps {
   items: Array<RLDDItem>;
   itemRenderer(item: RLDDItem, index: number): JSX.Element;
   onChange(items: Array<RLDDItem>): void;
+  onDragEnd(): void;
 }
 
 export interface RLDDState {
@@ -132,6 +133,7 @@ items: ${props.items.map(item => item.id).toString()}`;
 
   private handleDragEnd = () => {
     this.setState({ draggedId: -1, hoveredId: -1 });
+    this.props.onDragEnd();
   }
 
   private getNewItems(): RLDDItem[] | undefined {
